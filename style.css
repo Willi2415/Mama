@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .home {
+    background: url('img/fondo.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #d63384;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #d63384;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ad2670;
+  }
+  
+  .carta {
+    background: linear-gradient(135deg, #ffe6f0, #fbefff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carta-contenido {
+    max-width: 600px;
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carta-contenido h2 {
+    color: #c2185b;
+    margin-bottom: 1rem;
+  }
+
+  /* Animación de apertura */
+@keyframes abrirCarta {
+    0% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .carta-contenido {
+    animation: abrirCarta 1s ease-out;
+    transform-origin: top;
+  }
+
+  .flor {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.flor {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    animation: flotar 3s ease-in-out infinite;
+  }
+  
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .carta-enlace {
+    text-decoration: none;
+  }
+  
+  .sobre {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #fff;
+    color: #d63384;
+    border: 2px solid #d63384;
+    padding: 0.8rem 1.2rem;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .sobre:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    background-color: #ffe6f0;
+  }
+  
+  .corazones {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    animation: subir 4s infinite linear;
+    white-space: nowrap;
+  }
+  
+  @keyframes subir {
+    0% { transform: translate(-50%, 0); opacity: 1; }
+    100% { transform: translate(-50%, -100px); opacity: 0; }
+  }
+
+  .foto {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin-top: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+  
+  .grid-carta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .texto-carta {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .foto-carta img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
